@@ -1,0 +1,41 @@
+# Archivos de compilación de .NET
+*.obj
+*.pdb
+*.dll
+*.exe
+*.msi
+*.log
+*.vscode
+*.vs
+
+# Paquetes de NuGet
+*.nupkg
+*.paket.restore.log
+packages/
+
+# Archivos de compilación de Angular
+allied-test-spa/dist/
+/node_modules/
+/*.js
+/*.js.map
+/*.css
+/*.html
+
+# Archivos de configuración
+*.env
+*.env.prod
+
+# Otros archivos y directorios a ignorar
+.DS_Store
+Thumbs.db
+AlliedTestApi.sln
+allied-test-spa/node_modules/
+allied-test-spa/.angular/
+AlliedTestApi/bin/
+AlliedTestApi/obj/
+Application/obj/
+Application/bin/
+Domain/obj/
+Domain/bin/
+Infrastructure/obj/
+Infrastructure/bin/

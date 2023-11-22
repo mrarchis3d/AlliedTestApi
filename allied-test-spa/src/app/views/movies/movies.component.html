@@ -1,0 +1,25 @@
+<div class="flex flex-col items-center justify-center h-screen">
+    <div class="w-3/4 flex flex-col items-center gap-4 mt-10">
+      <div class="max-w-md w-full rounded-lg shadow-lg">
+        <input 
+        type="text" 
+        class="w-full bg-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-300" 
+        placeholder="Escribe aquí..."
+        [(ngModel)]="searchTerm"
+        (input)="onSearchInput()">
+      </div>
+  
+      <div class="w-full overflow-y-auto list-movies grid grid-cols-1 auto-rows-min bg-slate-600 gap-2 border-4 border-teal-950">
+        <!-- Aquí se generan las cards -->
+        @for (movie of movies; track movie.id) {
+            <app-cards [movieData]="movie"></app-cards>
+        }
+      </div>
+  
+      <div class="w-full flex justify-center mt-10">
+        <button (click)="loadMore()" class="p-4 rounded-md bg-slate-200">
+          <p class="text-slate-900">Load more...</p>
+        </button>
+      </div>
+    </div>
+  </div>
