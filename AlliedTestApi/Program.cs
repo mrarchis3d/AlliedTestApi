@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
 });
-builder.Services.AddTransient<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddAutoMapper(typeof(MovieProfile).Assembly);
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetPagedMoviesQueryHandler).Assembly));
 builder.Logging.ClearProviders();
