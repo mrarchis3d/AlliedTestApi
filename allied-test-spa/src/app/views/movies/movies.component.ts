@@ -36,7 +36,7 @@ export class MoviesComponent implements OnInit {
 
   loadMore() {
     this.page++;
-    this.moviesService.getMovies(this.page,10, this.searchTerm).subscribe((movies)=>{
+    this.moviesService.getMovies(this.page,5, this.searchTerm).subscribe((movies)=>{
       this.movies.push(... movies);
     })
     

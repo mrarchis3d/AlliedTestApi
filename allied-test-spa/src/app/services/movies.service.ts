@@ -7,7 +7,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class MoviesService {
-  private apiUrl = 'https://localhost:7266/api/Movie';
+  private apiUrl = 'https://localhost:7266/api/movies';
 
   constructor(private http: HttpClient) {}
 
